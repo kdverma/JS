@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content="width=devide-width",initial-scale=1.0>
+        <!--meta http-equiv="X-UA-Compatible" content="ie=edge" -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+        <title>my first charts</title>
+
+    </head>
+    <body>
+        <div class="container">
+            <canvas id = "myChart"></canvas>
+        </div>
+        <script>
+            let myChart = document.getElementById('myChart').getContext('2d')
+            var faltuchart = new Chart(myChart,
+            {
+            type:'radar',
+                    data : {
+                        labels : ["jan","feb","march","dec"],
+                        datasets : [{
+                          label: '# of Votes',
+                          data : [5,10,15,20],
+                          backgroundColor: [
+                'rgba(190, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(0, 255, 0, 1)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)'
+            ],
+            borderWidth: 1
+                        }]
+
+                    },
+                    options: {}
+                });
+        </script>
+    </body>
+</html>
